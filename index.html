@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Altamaritime — Notice</title>
+  <meta name="description" content="Down on the corder. For any inquiry please email chartering@altamaritime.com." />
+  <style>
+    :root{
+      --bg: #f7f8fb;
+      --fg: #0f172a;      /* slate-900 */
+      --muted: #475569;   /* slate-600 */
+      --card: #ffffff;
+      --accent: #0ea5e9;  /* sky-500 */
+      --radius: 18px;
+      --shadow: 0 6px 24px rgba(15,23,42,0.06), 0 2px 8px rgba(15,23,42,0.05);
+    }
+
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      background: radial-gradient(1200px 800px at 75% -10%, #e8f5ff 0%, transparent 60%),
+                  radial-gradient(1200px 800px at -10% 110%, #eef2ff 0%, transparent 60%),
+                  var(--bg);
+      color: var(--fg);
+      font: 400 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      letter-spacing: 0.01em;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card{
+      width: min(680px, 94vw);
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 4vw, 40px);
+      text-align: center;
+    }
+
+    h1{
+      margin: 0 0 8px 0;
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    p{
+      margin: 0.4rem 0 0;
+      color: var(--muted);
+      font-size: clamp(14px, 2.3vw, 16px);
+    }
+
+    .email{
+      display: inline-block;
+      margin-top: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--fg);
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(2,6,23,0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      box-shadow: 0 1px 0 rgba(2,6,23,0.04);
+    }
+    .email:hover{
+      transform: translateY(-1px);
+      border-color: rgba(14,165,233,0.35);
+      box-shadow: 0 8px 24px rgba(14,165,233,0.12);
+    }
+
+    .dot{
+      width: 8px; height: 8px; display:inline-block; border-radius: 50%;
+      background: var(--accent); margin-inline: 8px; opacity: .9; vertical-align: middle;
+    }
+
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b1220;
+        --fg: #e5e7eb;
+        --muted: #9aa4b2;
+        --card: #0f172a;
+        --shadow: 0 6px 24px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.35);
+      }
+      body{ background: radial-gradient(1200px 800px at 75% -10%, rgba(14,165,233,0.15) 0%, transparent 60%),
+                        radial-gradient(1200px 800px at -10% 110%, rgba(99,102,241,0.12) 0%, transparent 60%),
+                        var(--bg); }
+      .email{ border-color: rgba(255,255,255,0.08); }
+      .email:hover{ border-color: rgba(14,165,233,0.45); }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <h1 id="title">down on the corder</h1>
+    <p>for any inquiry please email us on</p>
+    <a class="email" href="mailto:chartering@altamaritime.com" aria-label="Email chartering at altamaritime dot com">
+      <span class="dot" aria-hidden="true"></span>chartering@altamaritime.com
+    </a>
+  </main>
+</body>
+</html>
